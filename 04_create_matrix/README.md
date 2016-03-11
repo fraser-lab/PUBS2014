@@ -1,10 +1,10 @@
 Module 4: Create matrix
 heatmap_BCs.py Barcode_scores_outliers_removed.pkl Allele_Dictionary.pkl
-output = Barcode_scores_outliers_removed_matrix.pkl
+output = Barcode_scores_outliers_removed_fit_matrix.pkl & Barcode_scores_outliers_removed_dev_matrix.pkl
 
-This script takes the Barcode scores and averages them to the amino acid level. It then outputs these scores as a heatmap and as a numpy matrix pkl. 
+This script takes the Barcode scores and averages them to the amino acid level and calculates the standard devation of the barcodes mapping to a given amino acid substitution. It then outputs these scores as a heatmap and the scores and SDs as numpy matrix pkls. 
 
-Barcode_scores_outliers_removed_matrix.pkl
+Barcode_scores_outliers_removed_fit_matrix.pkl
 masked_array(data = [21X76 matrix containing fitness scores for each aa substitution])
 
 [[-- -0.631791406846642 -0.5397724613430753 ..., -0.3530569856099873
@@ -19,3 +19,14 @@ masked_array(data = [21X76 matrix containing fitness scores for each aa substitu
  -0.5009308293341608 --]
  [-- -0.03813077561871194 -0.5946959237696324 ..., -0.5684471534238328
  -0.3959407495759722 --]]
+
+Barcode_scores_outliers_removed_dev_matrix.pkl
+masked_array(data = [21X76 matrix containing the standard deviation of the barcode fitness scores for each aa substitution])
+
+[[-- -- 0.07810572453203178 ..., 0.03738608565402174 -- --]
+ [-- -- -- ..., -- -- --]
+ [-- 0.09548287851233793 -- ..., -- -- --]
+ ...,
+ [-- -- -- ..., 0.02225009725522345 -- --]
+ [-- 0.04200403236126699 -- ..., -- -- --]
+ [-- 0.05500820984278576 -- ..., 0.10087705678557354 0.11792320714288289 --]]
